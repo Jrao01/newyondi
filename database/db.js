@@ -2,7 +2,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 // Configuración de la conexión
-const dbPath = path.resolve(__dirname, 'mi_tienda.db'); // Ruta a tu base de datos SQLite
+const dbPath = path.join(__dirname, 'mi_tienda.db'); // Ruta a tu base de datos SQLite
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Error al conectar a la base de datos SQLite:', err.message);
